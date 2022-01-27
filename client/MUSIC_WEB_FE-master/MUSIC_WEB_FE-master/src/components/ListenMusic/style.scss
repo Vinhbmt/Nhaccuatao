@@ -1,0 +1,245 @@
+.react-listen-music {
+    position: fixed;
+    z-index: 5;
+
+    .content-listen-music {
+        position: fixed;
+        height: calc(100% - 80px);
+        width: 100%;
+        background-color: #276887;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .music-tab {
+            width: 40%;
+            display: block;
+
+            span {
+                font-size: 18px;
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+                padding: 5px;
+                color: white;
+                background-color: #cd3932b0;
+                cursor: pointer;
+            }
+
+            span:first-child {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            span:last-child {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            .music-tab-active {
+                background-color: #960e07b0;
+            }
+        }
+
+        .music-lyrics {
+            resize: none;
+            width: 40%;
+            height: 80%;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+    }
+
+    .footer-listen-music {
+        position: fixed;
+        bottom: 0;
+        height: 80px;
+        background-color: rgb(199, 230, 255);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .music-info {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            img {
+                height: 100%;
+            }
+
+            .music-name {
+                font-weight: 500;
+            }
+
+            .music-name:hover {
+                color: rgb(32, 182, 219);
+                cursor: pointer;
+            }
+
+            .music-singer {
+                font-size: 14px;
+                padding: 5px 0px;
+                color: #a5abb1;
+            }
+        }
+
+        .music-control {
+            display: flex;
+            align-items: center;
+            audio {
+                outline: none !important;
+                border: none !important;
+                width: 600px;
+                height: 55px;
+            }
+    
+            audio::-webkit-media-controls-enclosure {
+                background-color: inherit;
+                outline: none !important;
+            }
+
+            .show-content-icon {
+                display: none;
+            }
+        }
+
+        // i:hover {
+        //     transform: scale(1.3);
+        //     cursor: pointer;
+        //     margin-left: 20px;
+        // }
+
+        .next-btn {
+            font-size: 25px;
+            margin-left: 0;
+            margin-right: 20px;
+        }
+
+        .prev-btn {
+            font-size: 25px;
+            margin-right: 0;
+        }
+
+        .repeat {
+            background-color: rgb(182, 180, 180);
+            font-size: 25px;
+            margin-right: 20px;
+            justify-content: space-around;
+            border-radius: 5px;
+        }
+
+        .non-repeat {
+            font-size: 25px;
+            margin-right: 20px;
+        }
+
+        .non-repeat:hover {
+            font-size: 25px;
+            margin-right: 20px;
+            background-color: rgb(217, 221, 221);
+            border-radius: 5px;
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .react-listen-music {
+        .content-listen-music {
+
+            .music-tab {
+                width: 55%;
+            }
+    
+            .music-lyrics {
+                width: 55%;
+            }
+        }
+    
+        .footer-listen-music {
+    
+            .music-control {
+                display: flex;
+                align-items: center;
+                audio {
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .react-listen-music {
+        .content-listen-music {
+
+            .music-tab {
+                width: 70%;
+            }
+    
+            .music-lyrics {
+                width: 70%;
+            }
+        }
+    
+        .footer-listen-music {
+    
+            .music-control {
+                display: flex;
+                align-items: center;
+                audio {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 700px) {
+    .react-listen-music {
+
+        .content-listen-music {
+
+            .music-tab {
+                width: 85%;
+            }
+    
+            .music-lyrics {
+                width: 85%;
+            }
+        }
+    
+        .footer-listen-music {
+            justify-content: center;
+            .music-info {
+                display: none;
+            }
+
+            .music-control {
+                .show-content-icon {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .react-listen-music {
+    
+        .footer-listen-music {
+            .music-control {
+                audio {
+                    width: 250px;
+                }
+            }
+        }
+    }
+}

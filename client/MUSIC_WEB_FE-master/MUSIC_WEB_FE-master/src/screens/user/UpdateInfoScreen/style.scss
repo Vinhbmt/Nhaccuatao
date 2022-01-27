@@ -1,0 +1,84 @@
+.update-user-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        .update-user {
+            display: flex;
+
+            .image-upload {
+                // margin-right: 100px;
+                // text-align: center;
+                // height: 50px;
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 240px;
+                    height: 240px;
+                    border-radius: 100%;
+                    margin-right: 100px;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+                .file-input-label {
+                    display: block;
+                    margin: auto;
+                    width: 200px;
+                    padding: 10px;
+                    margin-top: 10px;
+                    text-align: center;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .update-form {
+                margin-left: 50px;
+                width: 100%;
+                justify-content: center;
+    
+                label {
+                    font-size: 18px;
+                    font-weight: 450;
+                    color: #094c72;
+                }
+    
+                // input, textarea {
+                //     width: 100%;
+                // }
+    
+                textarea {
+                    resize: none;
+                    height: 250px;
+                }
+    
+                button {
+                    margin: auto;
+                }
+            }
+        }
+
+        .login-title {
+            text-align: center;
+            
+            span {
+                color: rgb(71, 110, 160);
+            }
+        }
+
+
+        
+
+        // .navigate-register {
+        //     text-align: center;
+        //     margin-top: 10px;
+
+        //     &:hover {
+        //         text-decoration: underline;
+        //         font-style: italic;
+        //         cursor: pointer;
+        //     }
+        // }
+}
